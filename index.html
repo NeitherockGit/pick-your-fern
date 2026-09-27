@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pick Your Fern!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Monoton&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="bulbs" class="bulbs" aria-hidden="true"></div>
+
+  <main id="pick-screen" class="screen pick">
+    <div class="sunburst" aria-hidden="true"></div>
+    <header class="title-wrap">
+      <p class="tagline">Live from the Greenhouse Studio&hellip;</p>
+      <h1 class="title"><span>Pick</span> <span>Your</span> <span>Fern!</span></h1>
+    </header>
+    <ul id="fern-row" class="fern-row"></ul>
+    <p class="hint">Choose wisely. There's no going back.<sup>*</sup> <small><sup>*</sup>You can go back.</small></p>
+  </main>
+
+  <section id="dance-screen" class="screen dance" hidden>
+    <div class="rays" aria-hidden="true"></div>
+    <div class="floor" aria-hidden="true"></div>
+    <canvas id="fx-back" class="fx" aria-hidden="true"></canvas>
+    <div id="darkness" class="darkness" aria-hidden="true"></div>
+    <div id="disco" class="disco" aria-hidden="true"><div class="disco-ball"></div></div>
+    <div id="sparkles" class="sparkles" aria-hidden="true"></div>
+    <div id="stage" class="stage">
+      <img class="echo" alt="" aria-hidden="true">
+      <img class="echo" alt="" aria-hidden="true">
+      <div id="dancer" class="actor lead"><img class="photo" alt=""></div>
+    </div>
+    <canvas id="fx-front" class="fx" aria-hidden="true"></canvas>
+    <div id="strobe" class="strobe" aria-hidden="true"></div>
+    <div id="crowd" class="crowd" aria-hidden="true"></div>
+    <div id="applause" class="applause-sign" aria-hidden="true">Applause</div>
+    <div class="hud">
+      <div class="hud-score"><span>Fern Points</span><b id="score">0</b></div>
+      <div id="combo" class="hud-combo"></div>
+      <div id="hud-hint" class="hud-hint">Press SPACE on the beat</div>
+    </div>
+    <div id="storm-warning" class="storm-warning" aria-hidden="true">
+      <div class="storm-tag">Weather Alert</div>
+      <div class="storm-crawl"><span>SANDSTORM WARNING &bull; SEEK SHELTER &bull; FERNS ARE ADVISED TO HOLD ON TO SOMETHING &bull; VISIBILITY: DUDUDUDUDU &bull; SANDSTORM WARNING &bull; SEEK SHELTER &bull; FERNS ARE ADVISED TO HOLD ON TO SOMETHING &bull; VISIBILITY: DUDUDUDUDU &bull;&nbsp;</span></div>
+    </div>
+    <div id="hype" class="hype-layer" aria-hidden="true"></div>
+    <div id="pops" class="pops" aria-hidden="true"></div>
+    <div id="banner" class="winner-banner">
+      <span class="banner-pre">You picked</span>
+      <span id="winner-name" class="banner-name"></span>
+    </div>
+    <button id="again" class="btn" type="button">Pick Again</button>
+    <p id="audio-note" class="audio-note" hidden></p>
+    <p id="photo-credit" class="photo-credit"></p>
+  </section>
+
+  <svg id="star-wipe" class="star-wipe" aria-hidden="true">
+    <polygon id="star-outline" points=""></polygon>
+  </svg>
+
+  <div id="toast" class="toast" role="status"></div>
+
+  <audio id="track" src="Sandstorm.mp3" preload="auto" loop></audio>
+
+  <script src="js/ferns.js"></script>
+  <script src="js/song.js"></script>
+  <script src="js/gear.js"></script>
+  <script src="js/synth.js"></script>
+  <script src="js/fx.js"></script>
+  <script src="js/crowd.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
